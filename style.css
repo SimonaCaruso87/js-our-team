@@ -9,7 +9,17 @@
 }
 
 img{
-    width: 100px;
-    height: 100px;
     object-fit: cover;
+}
+
+.col-4{
+    padding: 20px;
+}
+
+.name-container{
+    text-align: center;
+}
+
+.ruolo-container{
+    text-align: center;
 }

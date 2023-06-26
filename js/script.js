@@ -85,26 +85,47 @@ const row = document.querySelector('.row') ;
 for(let index = 0 ; index < arrayObject.length ; index++){
   const element = arrayObject[index];
 
-//BONUS
-//Trasformare la stringa foto in una immagine effettiva
+//aggiungere div , class col-4 e appendere imageContainer e colElement
+  const colElement = document.createElement('div');
+  colElement.classList.add('col-4');
+  row.append(colElement);
+  //BONUS
+  //Trasformare la stringa foto in una immagine effettiva
   const image = element['immagine'];
   console.log(image);
-
-//crea elemento img nell'html
+  //crea elemento img nell'html
   const imageContainer = document.createElement('img');
-
-//riempire il contenitore img
-imageContainer.setAttribute('src',image);
-
-//appendiamo imageContainer alla row 
-row.append(imageContainer);
+  //riempire il contenitore img
+  imageContainer.setAttribute('src',image);
 
 
+  colElement.append(imageContainer);
 
-    for(let key in element){
-      row.innerHTML += element[key];
-      // console.log(key , element[key]);
-    }
+  const nomeContainer = document.createElement('div') ;
+  nomeContainer.classList.add('name-container');
+  colElement.append(nomeContainer);
+
+  nomeContainer.innerHTML = element.nome ;
+
+  console.log(nomeContainer);
+
+
+  const ruoloContainer = document.createElement('div');
+  ruoloContainer.classList.add('ruolo-container');
+  colElement.append(ruoloContainer);
+
+  ruoloContainer.innerHTML = element.ruolo ;
+
+
+
+
+    
+    
+      
+// for(let key in element){
+//       row.innerHTML += element[key];
+//       // console.log(key , element[key]);
+//     }
 
 };
 
