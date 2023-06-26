@@ -18,8 +18,21 @@ img{
 
 .name-container{
     text-align: center;
+    background-color: whitesmoke;
 }
 
 .ruolo-container{
     text-align: center;
+    background-color: whitesmoke;
+
+}
+
+h1 , h3{
+    text-align: center;
+}
+
+form{
+    max-width: 700px;
+    margin: 0 auto ;
+    padding-top: 50px;
 }
