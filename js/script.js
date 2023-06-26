@@ -33,32 +33,32 @@ const arrayObject = [
   {
     nome : 'Wayne Barnett',
     ruolo : 'Founder & CEO',
-    immagine : 'wayne-barnett-founder-ceo.jpg' ,
+    immagine : 'img/wayne-barnett-founder-ceo.jpg' ,
   },
   {
     nome : 'Angela Caroll',
     ruolo : 'Chief Editor',
-    immagine : 'angela-caroll-chief-editor.jpg' ,
+    immagine : 'img/angela-caroll-chief-editor.jpg' ,
   },
   {
     nome : 'Walter Gordon',
     ruolo : 'Office Manager',
-    immagine : 'walter-gordon-office-manager.jpg' ,
+    immagine : 'img/walter-gordon-office-manager.jpg' ,
   },
   {
     nome : 'Angela Lopez',
     ruolo : 'Social Media Manager',
-    immagine : 'angela-lopez-social-media-manager.jpg' ,
+    immagine : 'img/angela-lopez-social-media-manager.jpg' ,
   },
   {
     nome : 'Scott Estrada',
     ruolo : 'Developer',
-    immagine : 'scott-estrada-developer.jpg' , 
+    immagine : 'img/scott-estrada-developer.jpg' , 
   },
   {
     nome : 'Barbara Ramos',
     ruolo : 'Graphic designer',
-    immagine : 'barbara-ramos-graphic-designer.jpg' ,
+    immagine : 'img/barbara-ramos-graphic-designer.jpg' ,
   },
 ];
 
@@ -71,7 +71,7 @@ for(let index = 0 ; index < arrayObject.length ; index++){
   // console.log(index , arrayObject[index]);
 
   for(let key in element){
-    console.log(key , element[key]);
+    // console.log(key , element[key]);
   }
 };
 
@@ -85,13 +85,29 @@ const row = document.querySelector('.row') ;
 for(let index = 0 ; index < arrayObject.length ; index++){
   const element = arrayObject[index];
 
-  for(let key in element){
-    row.innerHTML += element[key];
-    console.log(key , element[key]);
-  }
-};
-
 //BONUS
 //Trasformare la stringa foto in una immagine effettiva
+  const image = element['immagine'];
+  console.log(image);
 
+//crea elemento img nell'html
+  const imageContainer = document.createElement('img');
+
+//riempire il contenitore img
+imageContainer.setAttribute('src',image);
+
+//appendiamo imageContainer alla row 
+row.append(imageContainer);
+
+
+
+    for(let key in element){
+      row.innerHTML += element[key];
+      // console.log(key , element[key]);
+    }
+
+};
+
+
+ 
 
