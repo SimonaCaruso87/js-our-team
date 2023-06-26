@@ -33,44 +33,65 @@ const arrayObject = [
   {
     nome : 'Wayne Barnett',
     ruolo : 'Founder & CEO',
-    immagine : 'wayne-barnett-founder-ceo.jpg'
-  }
+    immagine : 'wayne-barnett-founder-ceo.jpg' ,
+  },
   {
     nome : 'Angela Caroll',
     ruolo : 'Chief Editor',
-    immagine : 'angela-caroll-chief-editor.jpg'
-  }
+    immagine : 'angela-caroll-chief-editor.jpg' ,
+  },
   {
     nome : 'Walter Gordon',
     ruolo : 'Office Manager',
-    immagine : 'walter-gordon-office-manager.jpg'
-  }
+    immagine : 'walter-gordon-office-manager.jpg' ,
+  },
   {
     nome : 'Angela Lopez',
     ruolo : 'Social Media Manager',
-    immagine : 'angela-lopez-social-media-manager.jpg'
-  }
+    immagine : 'angela-lopez-social-media-manager.jpg' ,
+  },
   {
     nome : 'Scott Estrada',
     ruolo : 'Developer',
-    immagine : 'scott-estrada-developer.jpg'
-  }
+    immagine : 'scott-estrada-developer.jpg' , 
+  },
   {
     nome : 'Barbara Ramos',
     ruolo : 'Graphic designer',
-    immagine : 'barbara-ramos-graphic-designer.jpg'
-  }
-]
-   
-console.log(arrayObject ,"Oggetti dell'array" , typeof arrayObject );
+    immagine : 'barbara-ramos-graphic-designer.jpg' ,
+  },
+];
+
 
 //MILESTONE 1:
 //Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+
+for(let index = 0 ; index < arrayObject.length ; index++){
+  const element = arrayObject[index];
+  // console.log(index , arrayObject[index]);
+
+  for(let key in element){
+    console.log(key , element[key]);
+  }
+};
 
 
 
 //MILESTONE 2:
 //Stampare le stesse informazioni su DOM sottoforma di stringhe
 
+const row = document.querySelector('.row') ;
+
+for(let index = 0 ; index < arrayObject.length ; index++){
+  const element = arrayObject[index];
+
+  for(let key in element){
+    row.innerHTML += element[key];
+    console.log(key , element[key]);
+  }
+};
+
+//BONUS
+//Trasformare la stringa foto in una immagine effettiva
 
 
